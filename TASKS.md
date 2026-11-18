@@ -7,7 +7,7 @@
 - T2 — Configure Python environment
 - T3 — Document architecture decisions
 - T4 — Generate UI in Google Stitch
-- T5 — Review visual identity and graphic resources
+- T5 — Review visual identity and graphic resources (closed with Stitch palette exception, see DECISIONS.md)
 - T6 — Create base HTML structure
 - T7 — Apply base styles and responsive design
 - T8 — Build beat cards with mock data
