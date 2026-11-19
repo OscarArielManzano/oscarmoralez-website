@@ -1,0 +1,800 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;family=Syne:wght@400..800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#e2e2e2", "background": "#131313", "tertiary-fixed": "#ffd9e2", "on-primary-fixed-variant": "#005301", "on-primary": "#003a01", "surface-container-lowest": "#0e0e0e", "on-primary-fixed": "#002200", "surface-container-low": "#1b1b1b", "secondary-fixed": "#ffdad5", "secondary": "#ffb4a9", "outline-variant": "#3e4a39", "on-secondary-container": "#ff9f91", "on-surface-variant": "#bdcbb4", "surface-bright": "#393939", "secondary-fixed-dim": "#ffb4a9", "on-secondary-fixed": "#410000", "primary-fixed": "#78ff64", "surface-container": "#1f1f1f", "on-error-container": "#ffdad6", "primary": "#5be14b", "primary-container": "#11a911", "tertiary-fixed-dim": "#ffb1c8", "inverse-surface": "#e2e2e2", "error": "#ffb4ab", "surface-container-highest": "#353535", "on-secondary-fixed-variant": "#930002", "on-secondary": "#690001", "on-tertiary": "#650033", "on-tertiary-fixed-variant": "#8e004a", "error-container": "#93000a", "surface-tint": "#5be14b", "tertiary": "#ffb1c8", "on-primary-container": "#003300", "on-tertiary-container": "#5a002d", "secondary-container": "#980002", "on-background": "#e2e2e2", "surface": "#131313", "surface-dim": "#131313", "tertiary-container": "#fd4e97", "inverse-on-surface": "#303030", "primary-fixed-dim": "#5be14b", "surface-container-high": "#2a2a2a", "surface-variant": "#353535", "outline": "#879580", "on-error": "#690005", "inverse-primary": "#006e03", "on-tertiary-fixed": "#3e001d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "3rem", "space-lg": "2rem", "gutter": "1.5rem", "space-md": "1rem", "space-xl": "4rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem" }, fontFamily: { "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "display": ["Syne"], "label-md": ["Space Mono"], "label-lg": ["Space Mono"], "display-mobile": ["Syne"], "headline-lg-mobile": ["Syne"], "headline-lg": ["Syne"], "label-sm": ["Space Mono"], "headline-sm": ["Syne"], "body-sm": ["Hanken Grotesk"], "headline-md": ["Syne"] }, fontSize: { "body-lg": ["1.125rem", { lineHeight: "1.6", letterSpacing: "-0.01em", fontWeight: "400" }], "body-md": ["0.9375rem", { lineHeight: "1.5", fontWeight: "400" }], "display": ["5.5rem", { lineHeight: "0.95", letterSpacing: "-0.04em", fontWeight: "800" }], "label-md": ["0.75rem", { lineHeight: "1.2", letterSpacing: "0.06em", fontWeight: "400" }], "label-lg": ["0.875rem", { lineHeight: "1.2", letterSpacing: "0.08em", fontWeight: "700" }], "display-mobile": ["3rem", { lineHeight: "1.0", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-lg-mobile": ["2.25rem", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["3.5rem", { lineHeight: "1.05", letterSpacing: "-0.03em", fontWeight: "700" }], "label-sm": ["0.625rem", { lineHeight: "1.1", letterSpacing: "0.1em", fontWeight: "400" }], "headline-sm": ["1.5rem", { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["0.8125rem", { lineHeight: "1.4", fontWeight: "400" }], "headline-md": ["2rem", { lineHeight: "1.15", letterSpacing: "-0.02em", fontWeight: "700" }] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="h-10 flex items-center gap-space-xs"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwD_JWV9CKjFNfM3Sp6a91dkHPIJluSoMQ96DBOYYuPM-FJLRLck2nElHiSuGbK_ONvqbgHHJCTB265WtKrQb1gGdYw4iL2cspL7kAxwnwsOO--k01ynN0Fz2tklXEx9MgGFOovScq63fjV7O-nj7jv1oV0qfuKOSyNpuDViBVuzHeFGYMN2MAun7ED-g9sT19JLnms1zAQRMiL-QhZHJDuQR8f33B-9JMS6xUc3XlizOnwFCcDYeUOg" alt="Logo Oscar Moralez" class="h-8 w-8 object-contain"><div class="h-10 px-2 bg-surface-container-high flex items-center justify-center"><span class="font-label-lg text-label-lg tracking-widest text-primary">[ OM ]</span></div></div><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider leading-none">Producer</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase leading-none mt-1">Beats Archive</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 pb-20 bg-surface-container-lowest"><div class="flex flex-col w-full text-on-surface">
+<!-- 00 // HERO SECTION -->
+<section class="flex flex-col px-margin-mobile pt-space-md pb-space-lg bg-surface-container-lowest">
+<!-- Studio Tag & Indicator -->
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Disponible Para Encargos</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">EST. 2019 / CDMX</span>
+</div>
+<!-- Main Headline -->
+<div class="flex flex-col mt-space-xs">
+<h2 class="font-display-mobile text-display-mobile tracking-tighter text-on-surface uppercase leading-none font-extrabold">
+        OSCAR<br>MORALEZ
+      </h2>
+<p class="font-label-md text-label-md uppercase tracking-wider text-primary mt-space-xs">
+        Independent Beatmaker / Music Producer
+      </p>
+</div>
+<!-- Slogan & Bio Snip -->
+<div class="mt-space-md py-space-sm pl-space-sm bg-surface-container-low">
+<p class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">
+        “Tu próximo hit comienza aquí.”
+      </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Texturas crudas, subwoofers análogos y ritmos hiper-calibrados para artistas de vanguardia.
+      </p>
+</div>
+<!-- Artist Photo Box -->
+<div class="relative w-full aspect-square mt-space-md overflow-hidden bg-surface-container-high group">
+<img alt="Oscar Moralez - Producer" class="w-full h-full object-cover filter grayscale contrast-125 transition-transform duration-300 group-hover:scale-105" data-alt="Editorial close-up portrait of Oscar Moralez, a 26-year-old Latino music producer wearing sleek dark streetwear and audio headphones in a dimly lit underground recording studio with deep black shadows, sharp overhead keylight, subtle acid green LED rim reflections, raw high contrast cinematic photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-JtKCxi_mV-9moljFhpnjnyNMuIChlJniFTjpEeUZr_jQpPNuwe45TAaZ3kG4YyR3MFx5By8vqd7L7BL-R4BdCwMniZTfdfrA99EvPgOXEG-6Oz1fBSQMAKeNBffa2rwgFEBCGrDwhlq8jZVHqDW0BaLm3KfuARqIyLYli9S-O_nogYG9MPRpwmM6NyhvFccQieMWLnFBTfypTfXJXLhgIoB1SgViWLfxM0Cnric8L4qBPDvH4DiRDw">
+<!-- Raw Framing Overlays -->
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-0.5">
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">[ FOTO ARTISTA ]</span>
+</div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-2 py-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">graphic_eq</span>
+<span class="font-label-sm text-label-sm text-on-surface tracking-widest uppercase">REC ACTIVE</span>
+</div>
+</div>
+<!-- Quick Genre Tags -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-sm">
+<div class="bg-surface-container-low p-2 text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-bold">REGGAETON</span>
+</div>
+<div class="bg-surface-container-low p-2 text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-bold">TRAP</span>
+</div>
+<div class="bg-surface-container-low p-2 text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-bold">R&amp;B</span>
+</div>
+</div>
+<!-- Hero CTA -->
+<a class="mt-space-md w-full bg-on-surface text-surface-container-lowest py-3.5 px-4 flex items-center justify-center gap-space-xs hover:bg-primary hover:text-on-primary transition-all active:scale-[0.99]" href="#contacto">
+<span class="font-label-lg text-label-lg tracking-widest uppercase font-bold">LET'S WORK TOGETHER</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</section>
+<!-- 01 // BEATS SECTION -->
+<section class="flex flex-col pt-space-lg pb-space-lg bg-surface-container-lowest">
+<!-- Section Header -->
+<div class="px-margin-mobile flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Catálogo Oficial</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tight font-bold text-on-surface">01 // BEATS</h3>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-1">
+<span class="font-label-sm text-label-sm text-on-surface uppercase">WAV + STEMS</span>
+</div>
+</div>
+<!-- Horizontal Popular Beats Carousel -->
+<div class="mt-space-sm">
+<div class="px-margin-mobile flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md tracking-wider uppercase text-on-surface-variant font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_fire_department</span>
+          TOP 5 POPULAR
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SCROLL →</span>
+</div>
+<!-- Scroller -->
+<div class="flex gap-space-sm overflow-x-auto px-margin-mobile pb-space-sm pt-1 snap-x scrollbar-none">
+<!-- Popular 1 -->
+<div class="snap-start flex-shrink-0 w-64 bg-surface-container p-space-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img alt="Perreo Obscuro Artwork" class="w-full h-full object-cover filter grayscale" data-alt="Minimalist monochromatic vinyl single cover artwork titled PERREO OBSCURO, high contrast black and deep crimson typography with heavy urban street grit texture, abstract noise wave patterns, brutalist graphic design album artwork" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk6TTXi-xiSRa1_YBcBo8dZn0iwnKwu9rzEsZtyyiCEvU22UZnQl9xmk7AzY75Y7H-PqfX4RC0GAgEb4n8o16x5zfZAM6b0Zq4HFT1ZOBjQqzoZkpQSJNN8LNEgCGDOWPG8frSrsw4bs53rnJveRozdkJcgDGvcIE8endq3k0IEwDUFiXDAPYbGCvMXCvJR5Sv455BWSDInBAU6vazRdnl7ca3clB4HmDwTDTRQ1KP">
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 px-1.5 py-0.5 font-label-sm text-label-sm text-primary uppercase">#01</span>
+<button aria-label="Reproducir Perreo Obscuro" class="absolute bottom-2 right-2 w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Reggaeton Pesado</span>
+<h4 class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold truncate mt-0.5">PERREO OBSCURO</h4>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low px-2 py-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">96 BPM / Dm</span>
+<span class="font-label-md text-label-md text-primary font-bold">$29.99</span>
+</div>
+</div>
+<!-- Popular 2 -->
+<div class="snap-start flex-shrink-0 w-64 bg-surface-container p-space-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img alt="Cyber Tokio Artwork" class="w-full h-full object-cover filter grayscale" data-alt="Dark aesthetic cassette cover labeled CYBER TOKIO, neon laser lines bleeding into deep black surface, analog tape aesthetic with Japanese street kanji and minimal Latin typography in high contrast stark white and acid green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_P18Po1PnllpALnD6oynZheAJmjcHM78zY_MlSkJwFNO3u8fWhrxc-HGoJ86tQ_QcyIVUjB9Y1YSEhCkKozJuAO7wdmZBc9pvsg4K-X2tKi-Le9ZUwItWnSSNdfAWjX7JOjYfIcllTqGWLVO-MhFgccLjF41CxQBY2cOgmBYTVILn7vFeZtBXFlt3DqeoooXHIgj3pkG8rEwNrQ5nan1Hi9TgtCEPAFtjI-Y4BV-_">
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 px-1.5 py-0.5 font-label-sm text-label-sm text-primary uppercase">#02</span>
+<button aria-label="Reproducir Cyber Tokio" class="absolute bottom-2 right-2 w-10 h-10 bg-on-surface text-surface-container-lowest flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Trap Latino</span>
+<h4 class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold truncate mt-0.5">CYBER TOKIO</h4>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low px-2 py-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">130 BPM / F#m</span>
+<span class="font-label-md text-label-md text-primary font-bold">$34.99</span>
+</div>
+</div>
+<!-- Popular 3 -->
+<div class="snap-start flex-shrink-0 w-64 bg-surface-container p-space-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img alt="Medianoche Artwork" class="w-full h-full object-cover filter grayscale" data-alt="Monochrome editorial portrait of luxury sports car illuminated by moonlight in Mexico City, cinematic grain, moody nocturnal smoke with sharp geometric editorial frames and white minimal text stating MEDIANOCHE" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1hjSh8vcGr16DmA_O23eGnmBhNPDtGgZzHw3efAGbx0IWvMwlZkSZ9zbF0keOJUi_ViRVjcuuxzBtrIfB0GceRr-t2Mdth6js5crto1f0WfRLPg42NmtUi_P4hM2gxmMKbHeGnVfdRfwTjMwlqx-NTQkWFy8lkaIZQZZX4buM5Qq4zJLkWY525lghHV-lva5eY7wHhFn2mB7lI3-81rRZAMl4AhJzh16EQ7p8p3ok">
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 px-1.5 py-0.5 font-label-sm text-label-sm text-primary uppercase">#03</span>
+<button aria-label="Reproducir Medianoche" class="absolute bottom-2 right-2 w-10 h-10 bg-on-surface text-surface-container-lowest flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Dark R&amp;B</span>
+<h4 class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold truncate mt-0.5">MEDIANOCHE</h4>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low px-2 py-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">88 BPM / Am</span>
+<span class="font-label-md text-label-md text-primary font-bold">$29.99</span>
+</div>
+</div>
+<!-- Popular 4 -->
+<div class="snap-start flex-shrink-0 w-64 bg-surface-container p-space-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img alt="Reckless Artwork" class="w-full h-full object-cover filter grayscale" data-alt="Stark industrial warehouse structural frame with strobe beam lighting, high fashion underground cover art typography stating RECKLESS, harsh black and white tones with subtle deep wine red accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfK9S5utt5QyNSlGbM8Hg-V9BVYZxPrDppi7yquXRpAiiYqFWFEaE0w_0_221yPFonfRyE9TadwO-rT2Ye1-jpO_9P2CO4s3Hsu7N1H9Zts7Z7ir2USVNDtD3I8JMMU6j_iOATKy2IqvHq4RKqb5TPOcXsXz9mfWnY_Egaa5k6_x0YOQ7hzDxOzgX03NUnfdMGxeedRZQ6_hQ5qyN9TEhBqJJUVlJPdKMU4ReO4qYs">
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 px-1.5 py-0.5 font-label-sm text-label-sm text-primary uppercase">#04</span>
+<button aria-label="Reproducir Reckless" class="absolute bottom-2 right-2 w-10 h-10 bg-on-surface text-surface-container-lowest flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Trap Drifting</span>
+<h4 class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold truncate mt-0.5">RECKLESS 808</h4>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low px-2 py-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">142 BPM / Cm</span>
+<span class="font-label-md text-label-md text-primary font-bold">$39.99</span>
+</div>
+</div>
+<!-- Popular 5 -->
+<div class="snap-start flex-shrink-0 w-64 bg-surface-container p-space-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img alt="Fuego Interno Artwork" class="w-full h-full object-cover filter grayscale" data-alt="Minimalist thermal camera heat map of vintage analog mixing console faders, brutalist layout design with intense contrasts and bold typography titled FUEGO INTERNO, futuristic Latin music aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw3ROqpOkw44l4IUv9aKKCBQYkQ84OvKATKpUmqMTnw4mBGWFe9og9HWVm7F6XKDHEFU9EA5-ed6k2c33Gy-mDP-JE39GhND1TTifypNPiksUlcxDx_YQ4NiLO64L1GbWMnpta-oOkdc-oB1RVQ7FZsCkb--bke2Fbk-jr6TAPc6rXpNZZykGVcFj5GJjRDAVSEAr5fV--q2LBdIiCdjzyWwYg5mwW66D3hy6sS6Cy">
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 px-1.5 py-0.5 font-label-sm text-label-sm text-primary uppercase">#05</span>
+<button aria-label="Reproducir Fuego Interno" class="absolute bottom-2 right-2 w-10 h-10 bg-on-surface text-surface-container-lowest flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Neoperreo Club</span>
+<h4 class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold truncate mt-0.5">FUEGO INTERNO</h4>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low px-2 py-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">100 BPM / Em</span>
+<span class="font-label-md text-label-md text-primary font-bold">$34.99</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Selector Tabs -->
+<div class="px-margin-mobile mt-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold">LATEST RELEASES (24)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">FILTRAR GÉNERO</span>
+</div>
+<div class="grid grid-cols-4 gap-1 p-1 bg-surface-container-low" id="genre-filter-tabs">
+<button class="py-2 text-center bg-on-surface text-surface-container-lowest font-label-sm text-label-sm uppercase font-bold tracking-wider transition-colors filter-btn" data-genre="all">ALL</button>
+<button class="py-2 text-center bg-surface-container text-on-surface hover:text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors filter-btn" data-genre="reggaeton">REGG</button>
+<button class="py-2 text-center bg-surface-container text-on-surface hover:text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors filter-btn" data-genre="trap">TRAP</button>
+<button class="py-2 text-center bg-surface-container text-on-surface hover:text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors filter-btn" data-genre="rnb">R&amp;B</button>
+</div>
+</div>
+<!-- 24 Compact Beat Grid (2 Columns) -->
+<div class="px-margin-mobile mt-space-sm grid grid-cols-2 gap-space-xs" id="beats-grid">
+<!-- Beat 1 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 1" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Dark street photography of Mexico City urban underpass at night, motion blur tail lights, harsh contrast black and white minimal album cover design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb70QBx2k36FLHA58Toumr5Bz6u7fXEJsKI-4Au1Bq1dy1fkh_km10aVLW423p79GvChHTXoiTRMctLNZS9-WLerLy9L5OtXQZmpg22XpxXoSc6DLbjTkg1mct1S_7F6jz_JDtD_hM6MmF1-o87ofirNNwYZ7-5Ww-RL66oepSpQa8ksILZd6-GOTlPx8K7dhXFiICZsa-wi42a_U3aNm0ksc6XahDq8O3UzLVOH1j">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">CALLE SANTO</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">94 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 2 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 2" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Monochrome studio portrait of analog synthesizer keys and cables, dark high contrast aesthetic music production cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxBayDVwFMxUngIplPLoFtVVgFeg_Mz6-pB4Jl4G1GC8DyJysW8mXQ2KClm4kuPPoi2pxPeTbiA5bIGhr0uMzANfSDumDo5cwflrpYqtuG5gWV-5qcf9hWPpQ6lpfxklnHfARSQHlPK2IEljb3ZCzHQJn997tpsAmOB1gnQh8FK2v8yc0Ts4awqHNFsMlqbTMHrRI7faHPtT5id8cYMB5JJS06pqxruu0ToMixPio_">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">VENENO PURO</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">128 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$34</span>
+</div>
+</div>
+</div>
+<!-- Beat 3 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 3" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Abstract nocturnal skyscraper silhouette through rain droplets on black glass, moody ambient R&amp;B visual cover art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcEiQVN26zdz-8GHVE2r7tZNx7Zozn13cel1Fae6XmlZNkfuQnu6OEa_zy5v35Pfg5IwRZGPT25N-lEHdA6ybWsQTHxRRtGXp5iDvvHoUIiHGgczxRmAEJqSF9sBqbDxGucmSwqxnLl8aAFTKmqq-cJESoNpPz7IEH0VXkAObFevKnOn6RwrqrtSrQIcc-ZCUFAoeWtX-Pbja5OPUBflg4mvz7sSaXiZa5yhU1EB8n">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">LÁGRIMAS 4AM</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">82 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 4 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 4" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Close up of sports steering wheel and leather dashboard in dark shadows, trap single cover art with minimalist brutalist typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEGN_f-PSNEvXk2C3tA3saJl7nBRCyYJiLDkPdfO9wbK6wKtAcLUjQmOiEwjTglj60gnydxeSn63VMXdMxSEGrmpgPLcXdy1yORrgwp5DX_LSMoLgtXmwyKPB3nYwTP45dZPLeJ68xXpYqeElwx_1NV7hcCvTAhvDsiCagC7UeKmMygAEcPdejI3_twpEZigpb2HBF5OGxEje0b_MxAaQfRP-S3ibTijSygCdncpn2">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">DINERO RÁPIDO</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">140 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$39</span>
+</div>
+</div>
+</div>
+<!-- Beat 5 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 5" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Brutalist architectural concrete stairs in harsh black shadow and white sunlight, underground reggaeton beat art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kVexRDTowSKkoFMd8KYZrCYVzWtW2LWruCrnzxuJnedtFBYyMnCMVTiymrSYXppeycucsAUOmrn0N5g0rSsWoLhLKXFyoP0VRwXSSaTnhBsE8W_QwcP3Lu_gtQROSLsuUkA-ccmJahbNN-wSkWV6wTvGo0taWLl4pUzfgcxhDX-xVvr0d0AHr0pSaYBhqyWkzGq3Bqbj68sizZSIOXL-PHtcd-MjRbC93fQmS6te">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">BLOQUE 18</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">98 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 6 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 6" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Silhouette of speaker stacks at an underground rave warehouse party, high grain black and white urban music cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBShpeENWsV1M3yFyRrQigPRbsCysATZs0h0p4WStcVFxrsuE-iZ0xUd1N5XtmiEMlLAjOLNxBHtbZ_aN-WEVBZhiDtvOCi5RcPc9QZVtmSL9Zbwdqi5C23gwwKgCYTi2OA-WVjnsYRXCf4WpAq9F9mBxNAN-wqQmNuRz9QiGhtNjlKZC_zbEQ9jhwKm-8Nk4bj8q1s5i9p8MBfK8IGBEuK99h3PijWwF0oFiUzALcj">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">SÓTANO RETRO</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">105 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$34</span>
+</div>
+</div>
+</div>
+<!-- Beat 7 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 7" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Monochrome textured digital audio waveform visualization in retro CRT television screen style, sharp cyber aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYtY6CMIHdsF9_hrTp3j2whW2BaLSyXiczqvonB_YgrbhbfvLPBpuWcNLYfbUrAH8we8eLmlPlxqK1SDNg8dpEK1gkw9GmnGwjS22Ej2ZBWG3-zPzNPyVJQ7L0qemYnE20cZCleaN4oUNeMmXYxtQFzSGX7l81SdnA6vpgDAk-EM-H12za8madNYMTb86uGDujUVsNfqtOoIRNEa1P2iLMU2u7zZx_WRv2x0KQp2G-">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">GLITCH DEMON</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">136 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$39</span>
+</div>
+</div>
+</div>
+<!-- Beat 8 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 8" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Candid photograph of audio engineer hands adjusting a vintage analog tube equalizer knob, warm darkroom shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwqpj7iutQUosAGt1_fpptp-I6gPua_PWiTKNPm8-sfxKrDkIpo4Zzx_61ClhZ-RqG3tmInIR14G_Ln0feCYBaLlhmXiyOwqvNotsgftTaI0XPVrf0yJ_6LyzLKD8esY7SPnOkPY6XMXoFFxaZeCNHXIuIDAmpxEalSgnAlj9LNmqZ6fzd8HCqQo26o8_zhtUJ0wG9aGdbW_jsFcWnQZ92a9FPCV9Di_DYg2ACZjNq">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">SECRETO 90</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">92 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 9 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 9" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Dark aesthetic silhouette of microphone stand in hazy rehearsal space, stark editorial minimalism" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBso1q6PKdQvHzE6J3UBWGsx4CL1XhSM7hKF8yvBWAIAWRImdEd67ORDPPkgkGbpLr4HZJ6C8Vkhb5BiqgKon5Zgv5d20gPYlxytzWaElBpd4RIwSBTn1f1pbYxS-LIYYKkzzAIbBFfoekA9yaDXz3SMXU6pH9_mE9BRrF9JhB80JVzuQKXFuCKgTZ2hTfR9SpvYjIHL2wxmgyJaScpJvKiPJp-iIUv8P-iw-qcFJV">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">ALMA SOLA</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">78 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$34</span>
+</div>
+</div>
+</div>
+<!-- Beat 10 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 10" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Monochrome photograph of an open MPC drum machine pad with illuminated tracking pads in a pitch black room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo0tUwtWs8pLB-IDKZefVT3GAb2OcriD69wi8q98_dyRsD2zRo2o5oZjs3wvVsr2q3olccdp3wMk3vmpR_SOn_3CEIky63agBDztEqXlM2nYI_cI8ESMUjKfFxseLy0NQFtMWLZLBI3sQmQnIRFKL5xGe7JYJV3B0Z4uELaygFxW7x03NywbDCiCrXqS5RHHUM-_mvAmSe4E_-3IOmN8RoqAPu3te-4MFYcQOdN-TS">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">TRAICIONES</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">144 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$39</span>
+</div>
+</div>
+</div>
+<!-- Beat 11 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 11" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Dramatic high key studio flash on chrome necklace and skull ring with dark urban backdrop, hip-hop track artwork" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjZy5mQAvannTt6N6e-Cf2zfcNzcRFrkmALyDbWYvNI68FfZaWycoRIPalD5Iws-lx2rBO6sgkqgWoYyQp9B0YplrVOUzeeawDuxhGbpbeVo_pfP4vxN9qI8oap87BpMDgcd7AX2Fnq9cIHtgwicdSk8Xoz6GvZBeRg5Nt_L8PgQUTinqS4yfDfvP6OdjJxeFr0m4v8PNNHPbFjoJKGlG7M2vFJaQS3rSCwfB_IAAM">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">CORONAS</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">112 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$34</span>
+</div>
+</div>
+</div>
+<!-- Beat 12 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 12" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Minimalist dark road highway divider lines in night fog, ambient mood with monochrome film texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoAm1S1BQ1lc4vxcLM9Vd9bp39sJNvJ_lBbuygb1WKSZNqOPyrV2ztoT4tMJsQDRNC9tqqPck6hKxnrk8Dp7drVP8Eus2BcdiqPl3LS3UmFG8Rv8OUS_ZOsP3zwc11b_6P_vcJ5aQ7ZQ-J9X5Jg_xLAoTSbIo4F0ve4Cmd8ZBVXQ_EysolOfD08fIy8OoRPxOyAe6LC4pEo76vMyFsf02yi6WYgB4wX0EfYIYUN2sv">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">NIEBLA</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">86 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 13 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 13" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Monochrome flash photo of leather moto jacket against brutalist concrete pillar, gritty modern trap album cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA09Ewss8AjL8yY-9LWVzRzT0tSKdjetfo4csiz0QR1vS_MTjQNigkTHPwWFW2xoqwnE_Fm3ZtBYfP7SjG3l7TmNVA1zO7rVzf8KX9L9h0o2Bnp-aTc_AU7OY_UfWNtmVNx_3H2VW4RrtaUCqb15Drs7X2g2RVgPpgzAdhdwLySepAGlRlZ1M-eYnii1rOmdUPvgfaPMSsiPdmXsA4HMegLrkucgZ2AtQt4-Ch9n9qw">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">NOCHES CDMX</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">97 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 14 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 14" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Industrial metal chain links over dark asphalt surface with intense high-contrast shadows, raw underground beat cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvJnHoeFRmIeS2Nozme54RPzSLaEeglFJSZwfvjvdXMkJaGRsVtXerxbJ-J88it96CYcEGtDOPqo4zLGk8L02Q4tkzY9ECC-V6dQW7MfBU3kksK8CVn6-WLl5QOZvtUIww7zm3uLcjSvLB-g400la7zXxaH_VnH3FPc4LU5q2BQQzEuyW3qOZdtKCAI3NjU42cUez57NUhVrRA4TOp_PeC5jgZ5hdWJTEGGlHruBKZ">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">ESLABÓN</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">132 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$34</span>
+</div>
+</div>
+</div>
+<!-- Beat 15 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 15" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Silhouetted palms against a dark overcast night sky with moody cinematic lightning flash, alternative R&amp;B single art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxNHgoo2rKCrkS2TL3zK1aJKIWtiZiOckQfzupo2BxStQksD0Oz0ZbTwlL3T8GJmMxZW-joeCy6yTJizKdZkmbBkRjQNAPWcMxl-OqlQleoppV1DWhr34heSixuIbivUlxRZ9w-8zlUFFfIGwetjWVbTHJEVY9OsLeGfAHXLmvU1XRC3F5JZKlWo8jcL7IKmBwTWrb1cStOgNZP-Kbm_KjKGrDThg7hmRAa9OmQ32Q">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">TORMENTA</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">75 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 16 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 16" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Abstract monochrome scan of metallic cassette tape mechanism with magnetic ribbon exposed, tape saturation concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnD8lqGFqVZGOYZri7563BVRUyxKL-PvsdeNVDwKL5x3gVJi42VUkGYoq_xUyx15spP0q0yptR1T4KAAMmMFslZ4jKMydQ6CO8utFw6zEfFUwKq0ZkV7nBcPNr4wAW0nJDryq7ySB94eXpyNDV6fesazRpdCxRJxCL30JECn6W5-x6itEpr0Uivsq85XQggYB1RkBfnNsTQedHKHNsrsMYrMF5O5Xsy6MamwPk49CR">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">CINTA ANÁLOGA</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">90 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$39</span>
+</div>
+</div>
+</div>
+<!-- Beat 17 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 17" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="High contrast flash snapshot of heavy bass speakers inside the trunk of a lowrider car, raw Latin urban culture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQQo-O9mtpyCgRpZxjIG9mQ1GmX5oWA2S2HXJaXXK2a7iaiJKqqsz5SNUOcP3nNdrt2WvJco_pu1sahTUXvBY03ufwveX7aA7GCw-MxCa418lMT1clvWR-OusU22-Pu2eLyY0wYSxX5-kfiexsLuNFoeFCl78hC6QJbDGV4E-b-tYixBzUZYRnpsd-i_1PsH68sXOZpWA-7Xf68YzySuVjizAO0WtYPPNdKoiQaUwJ">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">SUB BAJO 808</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">102 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$34</span>
+</div>
+</div>
+</div>
+<!-- Beat 18 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 18" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Monochrome close up of audio patch cables plugged into a modular synth rack, wires hanging in intricate patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzJf0CsDqr4-KkCwvg917odv7B6qzmVns04QU6hrFJ6b5IZ4pcWarzG6vN6Imjsvpy3AUB-1EcOBeCcK9zvWavJSLLPHFBIf94D1S5CEga11N_dzFtrr7YfKbq0H_Y8x5X2lHhLjo-_XJdHqxCvOAy9WDUiLvlfWy2vTyw1_S-SMTO-XZ8_a27e6x8ldM6WgZmCPbFogFiikHIptO_s5okTkTKK5YvLSvJViTodlBL">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">MODULAR VIP</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">138 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$39</span>
+</div>
+</div>
+</div>
+<!-- Beat 19 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 19" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Minimalist dark velvet curtains parted slightly to reveal a single spotlight beam, moody urban soul music vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyPQIDHwsBsnp9V-C9OwtK5L--KnFMXTq5ORllY6NjmQkdMU2v1YWV5ZPoi7rbrH4teyBepz4puC5dgMhf6B4Xkb8Z8x8LCKeg9A63SzgPf4ZcBKlPhswnof9etngVtBp04aPiGdei4XMJcP6JLNkwEct0FSgw2RyLZZDf3tJcKqx5KN8wxfooVE0_hEFTiDTrG3MTMpgvYq0G6S3q4BUKeL_8hCrG7Gkuyqtufx7J">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">TERCIOPELO</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">80 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 20 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 20" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Grayscale flash photo of sports sunglasses resting on an audio monitor speaker, sharp studio lifestyle photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKOoISBxpwZ6fpQgAIeMiQxOApkyRqlAP5i-9EUgCG6dtCtlKrAdG0KlZdWNAE0L8sZtlm8LSsBzHal0kmnp09sKGSvrkwfN34flgx5RvXeenvFEVgoBy71lEDBUV9Hbr6WX1fGed13wdOhTA30X6AIyUdaP-zrKwV9gwM-aR98Esd3R44HDXbpmOjcwOr7XGIYsQWNJXeVqkVx8hSReFA-1S9bKsJoz9fotGh9ZJB">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">BELLACO</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">95 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 21 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 21" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Black and white thermal texture of human heartbeat line distorted by distortion pedals, audio distortion album art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjc53k1esFnvCrKYTw_1C7jRuoeEA24gGkn3Z13EeGJ_ajS-I9S10xaVQSM18KLEkDEyqwwsGJw1Jz9zw04wZP5wGIbSAhy9ie6MtE26MO0jQMKWionYzwTTqnWUBuWAXxTGFh_t9ErVG-ATCOYGxD78cAA2vto6PSoI5cQls-9MvD3e5d_PXQD5nW4qOhEgxJskO73YRtCTDvpDYIi8gCrtaBJy1ZPA7-f41cta54">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">PULSO ROTO</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">146 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$39</span>
+</div>
+</div>
+</div>
+<!-- Beat 22 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 22" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Overhead photo of vintage vinyl turntable platter spinning in darkness, white dust specs and pure black vinyl groove" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu4qo0wnCaSiqQI5CtHGwUOjh8mmmu8AJTUO1Heq7g0c5sfLz2wzeHzNDGoX_E9RG2wM2IPYwLYs0kSiLqqoQDkz1gAApgfJH8BobplOkE7hdt0sD9RuCr0oFwSDKLM-YKwpqt9R2VHyd5_n0o66TglTjvog8Hndg-4rSFGfwThRykgJyiyeAd6LVSKL3bj0t7Pvl-L8Ab199dUYHtSzjb31I97wtCI7ViTdB1wGBx">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">VINILO CRUDO</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">91 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$34</span>
+</div>
+</div>
+</div>
+<!-- Beat 23 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 23" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Monochrome night cityscape with neon sign reflected in rain puddle on cracked pavement, urban R&amp;B photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALbG-pgIL1C4IOYfPKQq2lh_qEl-bAVCqKm2uHIvJ39EjQY8Ivue7qr6V8z955mQEj2q7-EK9hAWRn1M1G30Qb7LqNh3VVuXloWyvaYJqRsah8dgJf2s6uxV5dKug-HpD4oUeUBA0xnpAnytnJi2Qin6esYwQ89iKcQJV90LW6z0xlJ-Z26kgAygtO2vcUjedUe7LD1wR8Inz3AIewqLjbECQj4OjE8xktydTxHoW4">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">SIN SEÑAL</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">84 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$29</span>
+</div>
+</div>
+</div>
+<!-- Beat 24 -->
+<div class="bg-surface-container-low p-2 flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Cover 24" class="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform" data-alt="Stark minimalist typography graphic of the numbers 0808 on matte black carbon fiber texture, heavy 808 bass cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtm7-zCfbyQy8BAac6Jo0Ek2W0Il0gIBLKoYx166wQPwiA7PxEAU9JE2G2TI_6ofpeCnCM430wp_PtfHRgYHE6J6iTn9ZpqcQj9_OXzkMPZrVj7h61fRv1UkiRBv24Rcr8hy5jKegWcEXQvpM8y1n0HzOGv4bXbmZbe_n-Y-sqCOcYDaSq0CCbLuYyrlNi6SQaPPfzro9NL3S3l4PzjzgfUv8hwmVewiDzW_UNhTWa">
+<button aria-label="Play track" class="absolute bottom-1 right-1 w-8 h-8 bg-surface-container-lowest text-on-surface flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+<div class="mt-2">
+<h5 class="font-body-md text-body-md font-bold uppercase truncate text-on-surface">GOLPE FINAL</h5>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">100 BPM</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$34</span>
+</div>
+</div>
+</div>
+</div>
+<!-- License Terms Micro Banner -->
+<div class="mx-margin-mobile mt-space-md p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">DESCARGA INMEDIATA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Untagged WAV + Stems + Contrato PDF</span>
+</div>
+</div>
+<a class="px-3 py-1.5 bg-surface-container-high hover:bg-on-surface hover:text-surface-container-lowest transition-colors font-label-sm text-label-sm uppercase font-bold" href="#contacto">INFO</a>
+</div>
+</section>
+<!-- 02 // SOBRE MÍ -->
+<section class="flex flex-col px-margin-mobile pt-space-lg pb-space-lg bg-surface-container-low">
+<!-- Section Heading -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Biografía &amp; Filosofía</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tight font-bold text-on-surface">02 // SOBRE MÍ</h3>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">[ PRODUCER ]</span>
+</div>
+<!-- Studio Photo Box -->
+<div class="relative w-full aspect-video mt-space-sm bg-surface-container-highest overflow-hidden">
+<img alt="Oscar Moralez Studio Desk" class="w-full h-full object-cover filter grayscale contrast-110" data-alt="Cinematic wide shot of Oscar Moralez's underground private recording studio in Mexico City, acoustic treated walls in dark charcoal, Genelec studio monitors, vintage analog rack compressors with amber VU meters, dim green LED bias lighting, brutalist studio interior design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxkGf9l_JX1Jmg7sofjyS53Cu75MkVb0i7mzL8SUR8dRCxnmfw0wQf2soTdfaEH6rZd-f1UbKTftKCuu6iKvX7cUGtBlUaXUfEnSI5JSrTRn8LLWq-5LulNvBi07o6KZQFWa5mbkNw7dYk_YXtLQqwo9nNgmOi4kh3omrHEETyx5jJ13m_6bTWLqY9B3A5NuOE_IVkf4AlE2HkixUOZ3Yr5KP6-_6Q1SaThu58a2DK">
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-0.5">
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">[ FOTO ESTUDIO ]</span>
+</div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 px-2 py-0.5">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">LAB 01 - CDMX</span>
+</div>
+</div>
+<!-- Bio Text (2 Concise Paragraphs) -->
+<div class="flex flex-col gap-space-sm mt-space-md">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Oscar Moralez es un arquitecto sonoro independiente radicado en la Ciudad de México, forjando un sonido que desafía los límites comerciales del reggaeton contemporáneo, el trap underground y las texturas densas del R&amp;B oscuro. Su firma está anclada en el procesamiento de cajas analógicas, subwoofers hiper-afinadas y patrones rítmicos implacables que dejan espacio para que la voz del artista domine la mezcla.
+      </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Con más de 7 años de ingeniería y producción ejecutiva, cada instrumental está tratado meticulosamente en cadenas de saturación a válvula y balance estéreo quirúrgico, garantizando impacto demoledor tanto en sistemas de club como en auriculares para streaming global.
+      </p>
+</div>
+<!-- Influencias -->
+<div class="mt-space-md pt-space-sm bg-surface-container p-space-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">hub</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-bold">INFLUENCIAS &amp; REFERENTES</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-space-xs">
+<span class="px-3 py-1 bg-surface-container-highest font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">TAINY</span>
+<span class="px-3 py-1 bg-surface-container-highest font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">SKY ROMPIENDO</span>
+<span class="px-3 py-1 bg-surface-container-highest font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">METRO BOOMIN</span>
+<span class="px-3 py-1 bg-surface-container-highest font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">NOAH “40” SHEBIB</span>
+</div>
+</div>
+</section>
+<!-- 03 // DESTACADOS -->
+<section class="flex flex-col px-margin-mobile pt-space-lg pb-space-lg bg-surface-container-lowest">
+<!-- Section Heading -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Proyectos Selectos</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tight font-bold text-on-surface">03 // DESTACADOS</h3>
+</div>
+<div class="flex items-center gap-1 bg-secondary-container px-2 py-1">
+<span class="font-label-sm text-label-sm text-on-secondary-container uppercase font-bold">OFFICIAL DROP</span>
+</div>
+</div>
+<!-- Collab Feature Card -->
+<div class="mt-space-sm bg-surface-container-low overflow-hidden">
+<!-- Video / Collab Header -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">PRODUCCIÓN ESTRELLA</span>
+<h4 class="font-headline-sm text-headline-sm uppercase font-extrabold text-on-surface tracking-tight">Oscar Moralez × AP Wizard</h4>
+</div>
+<span class="material-symbols-outlined text-[28px] text-on-surface-variant">music_video</span>
+</div>
+<!-- Video Thumbnail Placeholder with Play Icon -->
+<div class="relative w-full aspect-video bg-surface-container-highest group cursor-pointer">
+<img alt="Video Oscar Moralez x AP Wizard" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-300" data-alt="Cinematic music video still frame of two artists performing inside an abandoned concrete parking lot at night with dramatic red sports car headlights shining behind them, thick atmospheric smoke, ultra sharp cinematic widescreen composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIggFADrSlIqRvVtntiGZ8iiZH20jhYp60qdmgIWhsO89SbnALO2OIEiA0Jl7BNskrOR6L2Q5rwCy2ck6mqx7BdXb9EX50yBznmG7icFOumDvNFF7aaycq46mG51zEk7GR8rVbOTSubRYm0vix7fPge7VtDknCsxgUy70fQW-KzNsPFPhHJkewZI-8QMBIjkKmvaxTK8tQf63rjlMJsS5vNVLt1c0cCz-5YAj8DHyN">
+<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
+<div class="w-16 h-16 bg-on-surface text-surface-container-lowest flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all shadow-xl group-hover:scale-110">
+<span class="material-symbols-outlined text-[36px]">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 px-2 py-0.5 font-label-sm text-label-sm text-on-surface uppercase">
+          SINGLE OFICIAL / 3:24
+        </div>
+</div>
+<!-- Description & Action -->
+<div class="p-space-sm flex flex-col gap-space-xs">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Producción integral, mezcla y sound design para el sencillo “Noche Ilegal”. Más de 350,000 reproducciones combinadas en las primeras 48 horas.
+        </p>
+<a class="mt-space-xs w-full bg-surface-container-high hover:bg-secondary-container hover:text-on-secondary-container text-on-surface py-3 px-4 flex items-center justify-center gap-space-xs font-label-md text-label-md uppercase font-bold tracking-wider transition-colors active:scale-[0.99]" href="https://youtube.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+<span>Watch on YouTube</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 04 // CONTACTO -->
+<section class="flex flex-col px-margin-mobile pt-space-lg pb-space-xl bg-surface-container" id="contacto">
+<!-- Header -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Inicia Una Conversación</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tight font-extrabold text-on-surface leading-none mt-1">
+        LLEVA TU PROYECTO AL SIGUIENTE NIVEL.
+      </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+        Custom beats, producción completa de álbumes, licencias exclusivas o ingeniería de mezcla. Respuesta en menos de 24 horas.
+      </p>
+</div>
+<!-- Main CTA Button -->
+<a class="mt-space-md w-full bg-primary text-on-primary py-4 px-4 flex items-center justify-center gap-space-xs hover:bg-on-surface hover:text-surface-container-lowest transition-all active:scale-[0.98]" href="mailto:booking@oscarmoralez.com?subject=Studio%20Session%20Inquiry">
+<span class="font-label-lg text-label-lg tracking-widest uppercase font-bold">LET'S WORK TOGETHER</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</a>
+<!-- Social / Direct Channels -->
+<div class="flex flex-col gap-space-xs mt-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">CANALES DIRECTOS:</span>
+<!-- Instagram Link Button -->
+<a class="w-full bg-surface-container-low hover:bg-surface-container-high p-3 flex items-center justify-between text-on-surface transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">photo_camera</span>
+<span class="font-label-md text-label-md uppercase font-bold">INSTAGRAM</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@oscarmoralezprod</span>
+</a>
+<!-- YouTube Link Button -->
+<a class="w-full bg-surface-container-low hover:bg-surface-container-high p-3 flex items-center justify-between text-on-surface transition-colors" href="https://youtube.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">subscriptions</span>
+<span class="font-label-md text-label-md uppercase font-bold">YOUTUBE</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@OscarMoralezBeats</span>
+</a>
+<!-- WhatsApp / Direct Booking -->
+<a class="w-full bg-surface-container-low hover:bg-surface-container-high p-3 flex items-center justify-between text-on-surface transition-colors" href="https://wa.me" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">chat</span>
+<span class="font-label-md text-label-md uppercase font-bold">WHATSAPP DIRECTO</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+52 (55) 8900 1204</span>
+</a>
+</div>
+</section>
+<!-- 05 // FOOTER -->
+<footer class="flex flex-col px-margin-mobile pt-space-md pb-space-lg bg-surface-container-lowest">
+<!-- Brand / Identity -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm uppercase font-extrabold text-on-surface tracking-wider">OSCAR MORALEZ</span>
+<div class="flex items-center gap-space-xs"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwD_JWV9CKjFNfM3Sp6a91dkHPIJluSoMQ96DBOYYuPM-FJLRLck2nElHiSuGbK_ONvqbgHHJCTB265WtKrQb1gGdYw4iL2cspL7kAxwnwsOO--k01ynN0Fz2tklXEx9MgGFOovScq63fjV7O-nj7jv1oV0qfuKOSyNpuDViBVuzHeFGYMN2MAun7ED-g9sT19JLnms1zAQRMiL-QhZHJDuQR8f33B-9JMS6xUc3XlizOnwFCcDYeUOg" alt="Logo Oscar Moralez" class="h-8 w-8 object-contain"><div class="h-8 px-2 bg-surface-container-high flex items-center justify-center"><span class="font-label-sm text-label-sm text-primary tracking-widest">[ OM ]</span></div></div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">
+        Urban Music Architecture &amp; Sound Engineering
+      </p>
+</div>
+<!-- Social Shortcuts -->
+<div class="flex items-center gap-space-sm mt-space-md">
+<a class="p-2 bg-surface-container-low hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="https://instagram.com">IG</a>
+<a class="p-2 bg-surface-container-low hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="https://youtube.com">YT</a>
+<a class="p-2 bg-surface-container-low hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="https://spotify.com">SPTFY</a>
+<a class="p-2 bg-surface-container-low hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="https://soundcloud.com">SC</a>
+<a class="p-2 bg-surface-container-low hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="https://beatstars.com">BSTARS</a>
+</div>
+<!-- Copyright -->
+<div class="mt-space-md pt-space-xs flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+        © 2025 OSCAR MORALEZ. TODOS LOS DERECHOS RESERVADOS.
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+        CDMX • PROHIBIDA LA REPRODUCCIÓN SIN LICENCIA AUTORIZADA.
+      </span>
+</div>
+</footer>
+<!-- Micro-interaction JS for Genre Filtering and Play Toggles -->
+<script>
+    (function() {
+      // Simple micro-interaction for category tabs
+      var filterButtons = document.querySelectorAll('#genre-filter-tabs .filter-btn');
+      filterButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          filterButtons.forEach(function(b) {
+            b.classList.remove('bg-on-surface', 'text-surface-container-lowest', 'font-bold');
+            b.classList.add('bg-surface-container', 'text-on-surface');
+          });
+          btn.classList.remove('bg-surface-container', 'text-on-surface');
+          btn.classList.add('bg-on-surface', 'text-surface-container-lowest', 'font-bold');
+        });
+      });
+
+      // Play button micro feedback
+      var playButtons = document.querySelectorAll('button[aria-label^="Play"], button[aria-label^="Reproducir"]');
+      playButtons.forEach(function(playBtn) {
+        playBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var icon = playBtn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            if (icon.textContent.trim() === 'play_arrow') {
+              icon.textContent = 'pause';
+              playBtn.classList.add('bg-primary', 'text-on-primary');
+            } else {
+              icon.textContent = 'play_arrow';
+              playBtn.classList.remove('bg-primary', 'text-on-primary');
+            }
+          }
+        });
+      });
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-bold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[54px] min-h-[44px] px-2 transition-colors text-primary font-bold" data-path="beats-archive" href="#"><span class="material-symbols-outlined text-[20px]">graphic_eq</span><span class="font-label-sm text-label-sm uppercase mt-1 tracking-wider">Beats</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[44px] px-2 text-on-surface-variant hover:text-on-surface transition-colors" data-path="discography" href="#"><span class="material-symbols-outlined text-[20px]">album</span><span class="font-label-sm text-label-sm uppercase mt-1 tracking-wider">Credits</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[44px] px-2 text-on-surface-variant hover:text-on-surface transition-colors" data-path="licensing-vault" href="#"><span class="material-symbols-outlined text-[20px]">key</span><span class="font-label-sm text-label-sm uppercase mt-1 tracking-wider">Licenses</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[44px] px-2 text-on-surface-variant hover:text-on-surface transition-colors" data-path="studio-contact" href="#"><span class="material-symbols-outlined text-[20px]">send</span><span class="font-label-sm text-label-sm uppercase mt-1 tracking-wider">Contact</span></a></div></nav>
+
+</body></html>
