@@ -1,5 +1,10 @@
 import os
 
+from dotenv import load_dotenv
+
+# Carga backend/.env si existe. Las variables del sistema tienen prioridad.
+load_dotenv()
+
 # La API Key se lee desde variable de entorno, nunca se escribe en el código.
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
 
