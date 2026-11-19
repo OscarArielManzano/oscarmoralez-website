@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+from cache import catalog_cache
 
 from catalog import get_latest_beats, get_popular_beats
 from config import ALLOWED_ORIGINS
@@ -15,9 +16,15 @@ CORS(app, resources={r"/api/*": {"origins": ALLOWED_ORIGINS}})
 
 
 def load_catalog():
+    cached = catalog_cache.get()
+    if cached is not None:
+        return cached
+
     playlist_id = get_uploads_playlist_id()
     video_ids = get_all_video_ids(playlist_id)
-    return get_videos_stats(video_ids)
+    videos = get_videos_stats(video_ids)
+    catalog_cache.set(videos)
+    return videos
 
 
 @app.errorhandler(YouTubeAPIError)
