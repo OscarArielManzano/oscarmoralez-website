@@ -383,3 +383,332 @@ section {
     font-size: 4.75rem;
   }
 }
+
+/* ==========================================================
+   Ajustes de layout: hero y "Sobre mí" (T16 feedback)
+   ========================================================== */
+
+
+
+
+
+
+
+
+
+/* "Sobre mí": texto y recuadro en columnas */
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-image-placeholder {
+  margin-top: 0;
+  max-height: 420px;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 360px;
+  justify-self: center;
+}
+
+/* md: 768px */
+@media (min-width: 768px) {
+
+}
+
+/* lg: 1024px */
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+  }
+
+  .about {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+  }
+
+  .about-image-placeholder {
+    justify-self: end;
+  }
+}
+
+/* ==========================================================
+   Efectos y decoración estilo Stitch (T16 feedback)
+   ========================================================== */
+
+/* Hover en tarjetas de beats */
+.beat-card {
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.beat-card img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+.beat-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.beat-card:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(1.2);
+}
+
+.beat-card:focus-within {
+  border-color: var(--color-accent);
+}
+
+/* Etiqueta técnica en el hero (Space Mono) */
+
+
+
+/* Líneas divisorias finas entre secciones */
+section + section {
+  border-top: 1px solid var(--color-border);
+}
+
+/* Botón secundario con borde sutil y flecha */
+.btn-secondary::after {
+  content: " →";
+}
+
+/* Franja decorativa superior del hero */
+
+/* Etiquetas de sección en Space Mono */
+.section-title::before {
+  content: "// ";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-weight: 400;
+}
+
+
+
+/* ==========================================================
+   Hero v2 — spec "Audio-Tech Brutalism"
+   ========================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 1.25rem 4rem;
+  background-color: #000000;
+  background-image: radial-gradient(circle, rgba(17, 169, 17, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  overflow: hidden;
+}
+
+/* Capa decorativa */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-radar {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: min(900px, 140vw);
+  transform: translate(-50%, -50%);
+}
+
+.hero-ruler {
+  display: none;
+  position: absolute;
+  top: 25%;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 2.4;
+  color: #555555;
+}
+
+.hero-ruler-left { left: 2rem; }
+.hero-ruler-right { right: 2rem; text-align: right; }
+
+.crop {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 0 solid rgba(255, 255, 255, 0.12);
+}
+
+.crop-tl { top: 1.5rem; left: 1.5rem; border-top-width: 1px; border-left-width: 1px; }
+.crop-tr { top: 1.5rem; right: 1.5rem; border-top-width: 1px; border-right-width: 1px; }
+.crop-bl { bottom: 1.5rem; left: 1.5rem; border-bottom-width: 1px; border-left-width: 1px; }
+.crop-br { bottom: 1.5rem; right: 1.5rem; border-bottom-width: 1px; border-right-width: 1px; }
+
+/* Contenido */
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 72rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #d4d4d8;
+}
+
+.hero-slashes { color: var(--color-accent-strong); }
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent-strong);
+  animation: hero-pulse 2s ease-in-out infinite;
+}
+
+@keyframes hero-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-title-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title-green { color: var(--color-accent-strong); }
+
+.hero-isotype {
+  height: 1.15em;
+  width: auto;
+  margin-left: 0.2em;
+  object-fit: contain;
+}
+
+.hero-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #f4f4f5;
+}
+
+.hero-tagline {
+  font-style: italic;
+  color: #a1a1aa;
+  padding: 0.5rem 1.5rem;
+  border-top: 1px solid rgba(39, 39, 42, 0.8);
+  border-bottom: 1px solid rgba(39, 39, 42, 0.8);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.hero-btn {
+  padding: 1rem 2rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-btn-primary {
+  background: var(--color-accent-strong);
+  color: #000000;
+}
+
+.hero-btn-primary:hover {
+  background: #14c714;
+  transform: scale(1.02);
+}
+
+.hero-btn-secondary {
+  border: 1px solid #3f3f46;
+  color: #ffffff;
+}
+
+.hero-btn-secondary:hover {
+  border-color: var(--color-accent-strong);
+}
+
+.hero-specs {
+  width: 100%;
+  max-width: 56rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #18181b;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #71717a;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero-title { font-size: 6rem; }
+  .hero-role { font-size: 1.25rem; }
+  .hero-specs {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero { padding: 7rem 3rem 4rem; }
+  .hero-title { font-size: 8rem; }
+  .hero-ruler { display: block; }
+}
+
+@media (min-width: 1280px) {
+  .hero-title { font-size: 9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-dot { animation: none; }
+  .hero-btn { transition: none; }
+}
+
+
+
+
+
